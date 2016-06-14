@@ -2,12 +2,10 @@
 defined('BASEPATH') OR exit('No direct script access allowed');
 
 class Sample extends CI_Controller {
-<<<<<<< HEAD:application/controllers/Sample.php
+
 	public function __construct(){
 		parent::__construct();
 	}
-=======
->>>>>>> e08e47fab74fcfc3ca6145edb1311de9a68c9e3e:application/controllers/Sample.php
 
 	public function index()
 	{
