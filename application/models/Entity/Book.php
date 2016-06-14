@@ -11,7 +11,7 @@ class Book
 {
 
 	/**
-	 * @Id
+	 * @Id 
 	 * @Column(type="integer", nullable=false)
 	 * @GeneratedValue(strategy="AUTO")
 	 */
