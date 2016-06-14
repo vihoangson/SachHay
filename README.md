@@ -18,18 +18,18 @@
 > composer install
 
 ** Bước 2:**
+```php
+	php application/doctrine orm:schema-tool:create
+	php application/doctrine orm:schema-tool:drop -f
+	php application/doctrine orm:schema-tool:update -f
+```
 
-> php application/doctrine orm:schema-tool:create
-> 
-> php application/doctrine orm:schema-tool:drop -f
-> 
-> php application/doctrine orm:schema-tool:update -f
 
 #Lưu ý phần này
 
 > @Entity(repositoryClass="Entity\UserRepository")
 
-D:\xampp\htdocs\vhosts\sachhay.opp.vn.dev.vn\application\models\Entity\User.php
+sachhay.opp.vn.dev.vn\application\models\Entity\User.php
 
 Tạo custome repository cho entity
 
