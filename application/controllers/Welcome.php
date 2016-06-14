@@ -58,6 +58,7 @@ class Welcome extends CI_Controller {
 				echo $value2->getId();
 			}
 		}
+
 		$user = $em->getRepository("Entity\User")->findAll();
 		foreach ($user as $key => $value) {
 			d($value->getGroup()->getName());
