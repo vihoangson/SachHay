@@ -1,5 +1,4 @@
 <?php
-
 namespace Entity;
 
 /**
@@ -7,7 +6,7 @@ namespace Entity;
  *
  * @Entity
  * @Table(name="user")
- *
+ * @Entity(repositoryClass="Entity\UserRepository")
  */
 class User
 {

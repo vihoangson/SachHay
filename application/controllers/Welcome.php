@@ -3,21 +3,6 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
 class Welcome extends CI_Controller {
 
-	/**
-	 * Index Page for this controller.
-	 *
-	 * Maps to the following URL
-	 * 		http://example.com/index.php/welcome
-	 *	- or -
-	 * 		http://example.com/index.php/welcome/index
-	 *	- or -
-	 * Since this controller is set as the default controller in
-	 * config/routes.php, it's displayed at http://example.com/
-	 *
-	 * So any other public methods not prefixed with an underscore will
-	 * map to /index.php/welcome/<method_name>
-	 * @see http://codeigniter.com/user_guide/general/urls.html
-	 */
 	public function index()
 	{
 		$this->index2();
@@ -47,9 +32,13 @@ class Welcome extends CI_Controller {
 
 	public function index2()
 	{
+		
 		$this->load->library('doctrine');
 		$group = new Entity\UserGroup;
 		d($group->getUsers()->toArray());
+
+		//============ ============  ============  ============ 
+
 		$em = $this->doctrine->em;
 		$groups = $em->getRepository("Entity\UserGroup")->findAll();
 		foreach ($groups as $key => $value) {
@@ -59,10 +48,36 @@ class Welcome extends CI_Controller {
 			}
 		}
 
+		//============ ============  ============  ============ 
+
 		$user = $em->getRepository("Entity\User")->findAll();
 		foreach ($user as $key => $value) {
 			d($value->getGroup()->getName());
 		}
-		
+
+		//$this->create_book();
+		$books = $this->doctrine->em->getRepository("Entity\Book")->findAll();
+		foreach ($books as $key => $value) {
+			echo $value->getName()."<br>";
+		}
+
+		// ============ ============  ============  ============
+		// Tạo book và lấy repository mới
+		// $this->create_book();
+		// $this->getCustomeRepository();
+		// ============ ============  ============  ============
+
+	}
+
+	public function getCustomeRepository(){
+		echo $this->doctrine->em->getRepository("Entity\User")->single();
+	}
+
+	public function create_book(){
+		$this->load->library('doctrine');
+		$book = new Entity\Book;
+		$book->setName("Bi mat cua su may man2");
+		$this->doctrine->em->persist($book);
+		$this->doctrine->em->flush();
 	}
 }
