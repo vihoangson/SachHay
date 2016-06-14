@@ -2,12 +2,14 @@
 defined('BASEPATH') OR exit('No direct script access allowed');
 
 class Sample extends CI_Controller {
+	public function __construct(){
+		parent::__construct();
+	}
 
 	public function index()
 	{
 		$this->index2();
 		return;
-		$this->load->library('doctrine');
 
 		$group = new Entity\UserGroup;
 		$group->setName('Users');
@@ -33,7 +35,7 @@ class Sample extends CI_Controller {
 	public function index2()
 	{
 		
-		$this->load->library('doctrine');
+		
 		$group = new Entity\UserGroup;
 		d($group->getUsers()->toArray());
 
@@ -66,15 +68,53 @@ class Sample extends CI_Controller {
 		// $this->create_book();
 		// $this->getCustomeRepository();
 		// ============ ============  ============  ============
-
+		$this->add_category();
 	}
 
+
+	/*
+	* Đổi category của 1 book
+	* 
+	* @datecreate: 20160614060500
+	*/
+	public function change_category(){
+		$category = $this->doctrine->em->find("Entity\Category",2);
+		$book = $this->doctrine->em->find("Entity\Book",1);
+		// Lưu ý quan trọng
+		$book->setCategory($category);
+		$this->doctrine->em->persist($book);
+		$this->doctrine->em->flush();
+	}
+
+
+	/**
+	* Tạo ra một category mới
+	* 
+	* @datecreate: 20160614060500
+	*/
+	public function create_category(){
+		$category = new Entity\Category;
+		$category->setName("hat giong tam hon");
+		$this->doctrine->em->persist($category);
+		$this->doctrine->em->flush();
+	}
+
+	/**
+	* Sử dụng custome Repository
+	* 
+	* @datecreate: 20160614060500
+	*/
 	public function getCustomeRepository(){
 		echo $this->doctrine->em->getRepository("Entity\User")->single();
 	}
 
+	/**
+	 * Tạo ra một sách mới
+	 * @return void
+	 * 
+	 * @datecreate: 20160614060500
+	 */
 	public function create_book(){
-		$this->load->library('doctrine');
 		$book = new Entity\Book;
 		$book->setName("Bi mat cua su may man2");
 		$this->doctrine->em->persist($book);

@@ -4,10 +4,10 @@ namespace Entity;
  *
  *
  * @Entity
- * @Table(name="Book")
+ * @Table(name="Category")
  *
  */
-class Book
+class Category
 {
 
 	/**
@@ -27,22 +27,12 @@ class Book
 	 */
 	protected $description="";
 
-	/**
-	 * @Column(type="integer", length=255, nullable=false)
-	 */
-	protected $star=0;
-
     /**
-     * @ManyToOne(targetEntity="Category")
-     * @JoinColumn(name="cat_id", referencedColumnName="id")
+     * @OneToMany(targetEntity="Book", mappedBy="category")
      */
-    protected $category;
+    private $book;
 
-    /**
-     * @ManyToOne(targetEntity="Authen")
-     * @JoinColumn(name="authen_id", referencedColumnName="id")
-     */
-    protected $authen;
+
 
     /**
      * Gets the value of id.
@@ -52,6 +42,20 @@ class Book
     public function getId()
     {
         return $this->id;
+    }
+
+    /**
+     * Sets the value of id.
+     *
+     * @param mixed $id the id
+     *
+     * @return self
+     */
+    public function setId($id)
+    {
+        $this->id = $id;
+
+        return $this;
     }
 
     /**
@@ -103,45 +107,25 @@ class Book
     }
 
     /**
-     * Gets the value of star.
+     * Gets the value of book.
      *
      * @return mixed
      */
-    public function getStar()
+    public function getBook()
     {
-        return $this->star;
-    }
-
-    public function setCat_id($cat_id)
-    {
-        $this->cat_id= $cat_id;
-        return $this;
-    }
-
-    public function getCat_id()
-    {
-        return $this->cat_id;
+        return $this->book;
     }
 
     /**
-     * Sets the value of star.
+     * Add users
      *
-     * @param mixed $star the star
-     *
-     * @return self
+     * @param Entity\User $users
+     * @return Group
      */
-    public function setStar($star)
+    public function addBook(\Entity\Book $book)
     {
-        $this->star = $star;
-
+        $this->book[] = $book;
         return $this;
     }
 
-    public function setCategory(Category $category){
-        $this->category = $category;
-    }
-
-    public function getCategory(){
-        return $this->category;
-    }
 }
