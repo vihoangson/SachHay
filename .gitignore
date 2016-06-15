@@ -7,3 +7,5 @@ application/logs/*
 !application/logs/.htaccess
 
 vendor/*
+
+*.sqlite

@@ -34,6 +34,11 @@ class Book
 	protected $star=0;
 
     /**
+     * @Column(type="string", length=255, nullable=true)
+     */
+    protected $image="";
+
+    /**
      * @ManyToOne(targetEntity="Category")
      * @JoinColumn(name="cat_id", referencedColumnName="id")
      */
@@ -146,6 +151,30 @@ class Book
         return $this->category;
     }
 
+    /**
+     * Gets the value of image.
+     *
+     * @return mixed
+     */
+    public function getImage()
+    {
+        return $this->image;
+    }
+
+    /**
+     * Sets the value of image.
+     *
+     * @param mixed $image the image
+     *
+     * @return self
+     */
+    protected function setImage($image)
+    {
+        $this->image = $image;
+
+        return $this;
+    }
+
 }
 
 
@@ -155,4 +184,6 @@ class BookRepository extends EntityRepository
     {
         return 123;
     }
+
+
 }
