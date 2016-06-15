@@ -1,11 +1,12 @@
 <?php
 namespace Entity;
+use Doctrine\ORM\EntityRepository;
 /**
  *
  *
  * @Entity
  * @Table(name="Book")
- *
+ * @Entity(repositoryClass="Entity\BookRepository")
  */
 class Book
 {
@@ -145,4 +146,13 @@ class Book
         return $this->category;
     }
 
+}
+
+
+class BookRepository extends EntityRepository
+{
+    public function single()
+    {
+        return 123;
+    }
 }

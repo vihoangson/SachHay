@@ -33,7 +33,10 @@ class Doctrine
 				'charset'	=> $db['default']['char_set'],
 			),
 		);
-
+		$connection_options = array(
+		    'driver' => 'pdo_sqlite',
+		    'path' => __DIR__ . '../../db.sqlite',
+		);
 		// With this configuration, your model files need to be in application/models/Entity
 		// e.g. Creating a new Entity\User loads the class from application/models/Entity/User.php
 		$models_namespace = 'Entity';
