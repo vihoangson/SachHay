@@ -35,12 +35,12 @@ class Book extends REST_Controller {
 
     function index_post()
     {
-        $this->response([1,231,241,24,12,41,24,12,4]);
+        $this->response(["index_post"]);
     }
 
     function index_put()
     {
-        $this->response([1,231,23333333341,24,12,41,24,12,4]);
+        $this->response(["index_put"]);
     }
 
 }
