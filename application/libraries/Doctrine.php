@@ -52,6 +52,9 @@ class Doctrine
 		$config = Setup::createAnnotationMetadataConfiguration($metadata_paths, $dev_mode, $proxies_dir);
 		$this->em = EntityManager::create($connection_options, $config);
 
+        // register all repositories class to the ClassLoader
+        (new ClassLoader('Repositories', APPPATH.'models'))->register();
+
 		$loader = new ClassLoader($models_namespace, $models_path);
 		$loader->register();
 	}

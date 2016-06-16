@@ -37,3 +37,8 @@ Tạo custome repository cho entity
 # Command tạo proxies cho các quan hệ trong doctrine
 
 > php application\doctrine.php orm:generate:proxies
+
+Tài liệu tham khảo
+https://github.com/apdevlab/cidoct.git
+
+https://github.com/vihoangson/Api_CI_Doctrine.git

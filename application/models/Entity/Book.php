@@ -6,8 +6,9 @@ use Doctrine\ORM\EntityRepository;
  *
  * @Entity
  * @Table(name="Book")
- * @Entity(repositoryClass="Entity\BookRepository")
+ * @Entity(repositoryClass="Repositories\BookRepository")
  */
+
 class Book
 {
 
@@ -174,16 +175,5 @@ class Book
 
         return $this;
     }
-
-}
-
-
-class BookRepository extends EntityRepository
-{
-    public function single()
-    {
-        return 123;
-    }
-
 
 }
