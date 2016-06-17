@@ -118,12 +118,21 @@
 		</script>
 		<script src="<?= TEMPLATE_PATH; ?>master/analytics/analytics.js"></script>
 		<script>
+				$('body').prepend('<div id="flash" style="display:none"></div>');
+				
 				$(".ajax_link").click(function(event) {
 					$.post($(this).attr("href"), {data:$(this).data()}, function(data, textStatus, xhr) {
+						showFlash(data);
 					});
 					return false;
 				});
-
+				function showFlash (message) {
+					$('#flash').html(message);
+					$('#flash').fadeIn("slow");
+					$('#flash').toggleClass('cssClassHere');
+					$('#flash').slideDown('slow');
+				};
+				$('#flash').click(function () { $(this).fadeOut('slow'); $(this).html("");});
 		</script>
 
 	</body>

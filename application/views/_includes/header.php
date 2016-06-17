@@ -45,7 +45,16 @@
 
 		<!-- Head Libs -->
 		<script src="<?= TEMPLATE_PATH; ?>vendor/modernizr/modernizr.min.js"></script>
-
+<style>
+div#flash {
+    background: #efefef;
+    position: fixed;
+    top: 10px;
+    right: 10px;
+    padding: 12px;
+    z-index: 122;
+}
+</style>
 	</head>
 	<body>
 
@@ -100,7 +109,17 @@
 										<div class="header-nav-main header-nav-main-effect-1 header-nav-main-sub-effect-1 collapse">
 											<nav>
 												<ul class="nav nav-pills" id="mainNav">
-													<li class="dropdown">
+													<li class="">
+														<a class="ajax_link" href="/api/book/add_book">
+															Add book test
+														</a>
+													</li>
+													<li class="">
+														<a class="ajax_link" href="/api/book/remove_all_book">
+															Remove all
+														</a>
+													</li>
+													<li class="dropdown hidden">
 														<a class="dropdown-toggle" href="<?= TEMPLATE_PATH; ?>index.html">
 															Home
 														</a>
@@ -154,7 +173,7 @@
 															</li>
 														</ul>
 													</li>
-													<li class="dropdown dropdown-mega">
+													<li class="dropdown hidden dropdown-mega">
 														<a class="dropdown-toggle" href="<?= TEMPLATE_PATH; ?>#">
 															Shortcodes
 														</a>
@@ -219,7 +238,7 @@
 															</li>
 														</ul>
 													</li>
-													<li class="dropdown">
+													<li class="dropdown hidden">
 														<a class="dropdown-toggle" href="<?= TEMPLATE_PATH; ?>#">
 															Features
 														</a>
@@ -370,7 +389,7 @@
 															</li>
 														</ul>
 													</li>
-													<li class="dropdown active">
+													<li class="dropdown hidden active">
 														<a class="dropdown-toggle" href="<?= TEMPLATE_PATH; ?>#">
 															Pages
 														</a>
@@ -426,7 +445,7 @@
 															<li><a href="<?= TEMPLATE_PATH; ?>page-login.html">Login / Register</a></li>
 														</ul>
 													</li>
-													<li class="dropdown">
+													<li class="dropdown hidden">
 														<a class="dropdown-toggle" href="<?= TEMPLATE_PATH; ?>#">
 															Portfolio
 														</a>
@@ -440,7 +459,7 @@
 															<li><a href="<?= TEMPLATE_PATH; ?>portfolio-single-project.html">Single Project</a></li>
 														</ul>
 													</li>
-													<li class="dropdown">
+													<li class="dropdown hidden">
 														<a class="dropdown-toggle" href="<?= TEMPLATE_PATH; ?>#">
 															About Us
 														</a>
@@ -450,7 +469,7 @@
 															<li><a href="<?= TEMPLATE_PATH; ?>about-me.html">About Me</a></li>
 														</ul>
 													</li>
-													<li class="dropdown">
+													<li class="dropdown hidden">
 														<a class="dropdown-toggle" href="<?= TEMPLATE_PATH; ?>#">
 															Contact Us
 														</a>
@@ -469,4 +488,3 @@
 					</div>
 				</div>
 			</header>
-			<a class="ajax_link" href="/homepage/add_book" data-id="111">add book</a>

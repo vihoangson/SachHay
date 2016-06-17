@@ -24,6 +24,16 @@ class Homepage extends CI_Controller {
         $book->setName("Bí mật của sự may mắn");
         $this->em->persist($book);
         $this->em->flush();
+        echo json_encode(["status"=>"Done"]);
+    }
+
+    public function remove_all_book(){
+        $obj_rm = $this->em->getRepository("Entity\Book")->findAll();
+        foreach ($obj_rm as $key => $value) {
+            $this->em->remove($value);
+        }
+        $this->em->flush();
+        echo json_encode(["status"=>"Done"]);
     }
 
 }

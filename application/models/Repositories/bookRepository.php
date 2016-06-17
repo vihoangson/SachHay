@@ -11,7 +11,7 @@ class BookRepository extends EntityRepository {
         return $this->getEntitymanager()->createQueryBuilder()
             ->select('b')
             ->from('Entity\Book', 'b')
-            ->orderBy('b.name', 'DESC')
+            ->orderBy('b.id', 'DESC')
             ->getQuery()
             ->getArrayResult();
     }
