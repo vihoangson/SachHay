@@ -1850,7 +1850,7 @@ window.theme = {};
 
 // Tweets
 (function(theme, $) {
-
+return;
 	theme = theme || {};
 
 	var instanceName = '__tweets';

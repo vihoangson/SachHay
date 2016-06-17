@@ -83,7 +83,7 @@
 		<script src="<?= TEMPLATE_PATH; ?>vendor/jquery.appear/jquery.appear.min.js"></script>
 		<script src="<?= TEMPLATE_PATH; ?>vendor/jquery.easing/jquery.easing.min.js"></script>
 		<script src="<?= TEMPLATE_PATH; ?>vendor/jquery-cookie/jquery-cookie.min.js"></script>
-		<script src="<?= TEMPLATE_PATH; ?>master/style-switcher/style.switcher.js"></script>
+		<!-- <script src="<?= TEMPLATE_PATH; ?>master/style-switcher/style.switcher.js"></script> -->
 		<script src="<?= TEMPLATE_PATH; ?>vendor/bootstrap/js/bootstrap.min.js"></script>
 		<script src="<?= TEMPLATE_PATH; ?>vendor/common/common.min.js"></script>
 		<script src="<?= TEMPLATE_PATH; ?>vendor/jquery.validation/jquery.validation.min.js"></script>
@@ -117,6 +117,14 @@
 			ga('send', 'pageview');
 		</script>
 		<script src="<?= TEMPLATE_PATH; ?>master/analytics/analytics.js"></script>
+		<script>
+				$(".ajax_link").click(function(event) {
+					$.post($(this).attr("href"), {data:$(this).data()}, function(data, textStatus, xhr) {
+					});
+					return false;
+				});
+
+		</script>
 
 	</body>
 </html>

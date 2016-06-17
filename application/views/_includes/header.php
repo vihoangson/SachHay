@@ -115,7 +115,7 @@
 																	Landing Page
 																</a>
 															</li>
-															<li class="dropdown-submenu">
+															<li class="dropdown-submenu hidden">
 																<a href="<?= TEMPLATE_PATH; ?>index-classic.html">Classic</a>
 																<ul class="dropdown-menu">
 																	<li><a href="<?= TEMPLATE_PATH; ?>index-classic.html" data-thumb-preview="img/previews/preview-classic.jpg">Classic - Original</a></li>
@@ -125,7 +125,7 @@
 																	<li><a href="<?= TEMPLATE_PATH; ?>index-classic-video-light.html" data-thumb-preview="img/previews/preview-classic-video-light.jpg">Classic - Video - Light</a></li>
 																</ul>
 															</li>
-															<li class="dropdown-submenu">
+															<li class="dropdown-submenu hidden">
 																<a href="<?= TEMPLATE_PATH; ?>index-corporate.html">Corporate <span class="tip">new</span></a>
 																<ul class="dropdown-menu">
 																	<li class="dropdown-submenu">
@@ -148,7 +148,7 @@
 															</li>
 															<li class="dropdown-submenu">
 																<a href="<?= TEMPLATE_PATH; ?>#">One Page</a>
-																<ul class="dropdown-menu">
+																<ul class="dropdown-menu hidden">
 																	<li><a href="<?= TEMPLATE_PATH; ?>index-one-page.html" data-thumb-preview="img/previews/preview-one-page.jpg">One Page Original</a></li>
 																</ul>
 															</li>
@@ -469,3 +469,4 @@
 					</div>
 				</div>
 			</header>
+			<a class="ajax_link" href="/homepage/add_book" data-id="111">add book</a>

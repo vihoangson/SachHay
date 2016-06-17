@@ -5,10 +5,10 @@ class Homepage extends CI_Controller {
     private $em;
     public function __construct(){
         parent::__construct();
+        $this->em = $this->doctrine->em;
         if(count($this->doctrine->em->getRepository("Entity\Book")->findAll())==0){
             $this->add_book();
         }
-        $this->em = $this->doctrine->em;
     }
 
     public function index(){
