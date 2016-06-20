@@ -134,6 +134,12 @@
 				};
 				$('#flash').click(function () { $(this).fadeOut('slow'); $(this).html("");});
 		</script>
+		<?php
 
+		foreach ($footer_script as $key => $value) {
+			echo $value;
+		}
+
+		?>
 	</body>
 </html>
