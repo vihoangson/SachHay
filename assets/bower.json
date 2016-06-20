@@ -1,0 +1,21 @@
+{
+  "name": "Sach Hay",
+  "authors": [
+    "Son Vi Hoang <hoang_son@lampart-vn.com>"
+  ],
+  "description": "",
+  "main": "",
+  "license": "MIT",
+  "homepage": "",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "font-awesome": "^4.6.2",
+    "summernote": "^0.8.1"
+  }
+}

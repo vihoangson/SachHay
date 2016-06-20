@@ -9,3 +9,4 @@ application/logs/*
 vendor/*
 
 *.sqlite
+assets/bower_components/*
