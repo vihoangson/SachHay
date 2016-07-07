@@ -4,8 +4,8 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "d5f6866e3f8ffaad79988e30f0aa37cf",
-    "content-hash": "2d2abf8a7fbdc5e38ab13cede4e9778c",
+    "hash": "c2dc11230d4ccded478a9d8bd6aceec7",
+    "content-hash": "e28a912bd1fcfe842dacdc0ea0af26fa",
     "packages": [
         {
             "name": "doctrine/annotations",
@@ -608,17 +608,58 @@
             "time": "2015-04-02 20:40:18"
         },
         {
-            "name": "symfony/console",
-            "version": "v2.8.4",
+            "name": "helper_common",
+            "version": "dev-master",
             "source": {
                 "type": "git",
-                "url": "https://github.com/symfony/console.git",
-                "reference": "9a5aef5fc0d4eff86853d44202b02be8d5a20154"
+                "url": "https://github.com/vihoangson/helper_common.git",
+                "reference": "91886c9fe58d06e8779b6c7ed06d1598ee4ea8a3"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/console/zipball/9a5aef5fc0d4eff86853d44202b02be8d5a20154",
-                "reference": "9a5aef5fc0d4eff86853d44202b02be8d5a20154",
+                "url": "https://api.github.com/repos/vihoangson/helper_common/zipball/91886c9fe58d06e8779b6c7ed06d1598ee4ea8a3",
+                "reference": "91886c9fe58d06e8779b6c7ed06d1598ee4ea8a3",
+                "shasum": ""
+            },
+            "type": "library",
+            "autoload": {
+                "files": [
+                    "src/helper_common/form/form_helper.php"
+                ]
+            },
+            "license": [
+                "hoang_son"
+            ],
+            "authors": [
+                {
+                    "name": "Hoang Son",
+                    "email": "vihoangson@gmail.com"
+                }
+            ],
+            "description": "Helper common",
+            "homepage": "http://vihoangson.com",
+            "keywords": [
+                "helper",
+                "hoangson"
+            ],
+            "support": {
+                "source": "https://github.com/vihoangson/helper_common/tree/master",
+                "issues": "https://github.com/vihoangson/helper_common/issues"
+            },
+            "time": "2016-07-07 02:35:03"
+        },
+        {
+            "name": "symfony/console",
+            "version": "v2.8.8",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/symfony/console.git",
+                "reference": "c392a6ec72f2122748032c2ad6870420561ffcfa"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/symfony/console/zipball/c392a6ec72f2122748032c2ad6870420561ffcfa",
+                "reference": "c392a6ec72f2122748032c2ad6870420561ffcfa",
                 "shasum": ""
             },
             "require": {
@@ -665,20 +706,20 @@
             ],
             "description": "Symfony Console Component",
             "homepage": "https://symfony.com",
-            "time": "2016-03-17 09:19:04"
+            "time": "2016-06-29 07:02:14"
         },
         {
             "name": "symfony/polyfill-mbstring",
-            "version": "v1.1.1",
+            "version": "v1.2.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/polyfill-mbstring.git",
-                "reference": "1289d16209491b584839022f29257ad859b8532d"
+                "reference": "dff51f72b0706335131b00a7f49606168c582594"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/polyfill-mbstring/zipball/1289d16209491b584839022f29257ad859b8532d",
-                "reference": "1289d16209491b584839022f29257ad859b8532d",
+                "url": "https://api.github.com/repos/symfony/polyfill-mbstring/zipball/dff51f72b0706335131b00a7f49606168c582594",
+                "reference": "dff51f72b0706335131b00a7f49606168c582594",
                 "shasum": ""
             },
             "require": {
@@ -690,7 +731,7 @@
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "1.1-dev"
+                    "dev-master": "1.2-dev"
                 }
             },
             "autoload": {
@@ -724,13 +765,15 @@
                 "portable",
                 "shim"
             ],
-            "time": "2016-01-20 09:13:37"
+            "time": "2016-05-18 14:26:46"
         }
     ],
     "packages-dev": [],
     "aliases": [],
     "minimum-stability": "stable",
-    "stability-flags": [],
+    "stability-flags": {
+        "helper_common": 20
+    },
     "prefer-stable": false,
     "prefer-lowest": false,
     "platform": [],

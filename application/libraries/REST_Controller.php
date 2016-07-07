@@ -1258,7 +1258,7 @@ abstract class REST_Controller extends CI_Controller
 
         log_message('debug', 'LDAP Auth: Loading Config');
 
-        $this->config->load('ldap.php', TRUE);
+        //$this->config->load('ldap.php', TRUE);
 
         $ldap = [
             'timeout' => $this->config->item('timeout', 'ldap'),

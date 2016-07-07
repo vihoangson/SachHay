@@ -95,6 +95,7 @@
 		<script src="<?= TEMPLATE_PATH; ?>vendor/owl.carousel/owl.carousel.min.js"></script>
 		<script src="<?= TEMPLATE_PATH; ?>vendor/magnific-popup/jquery.magnific-popup.min.js"></script>
 		<script src="<?= TEMPLATE_PATH; ?>vendor/vide/vide.min.js"></script>
+		<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery.form/3.51/jquery.form.min.js"></script>
 
 		<script src="/assets/js/book_homepage.js"></script>
 		

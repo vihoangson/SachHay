@@ -1,8 +1,13 @@
 {
     "name": "wildlyinaccurate/codeigniter-2-with-doctrine-2",
     "require": {
+        "helper_common":"dev-master",
         "doctrine/orm": "2.5.0"
     },
+    "repositories": [{
+    "type": "vcs",
+    "url": "https://github.com/vihoangson/helper_common"
+    }],
     "authors": [
         {
             "name": "Joseph Wynn",

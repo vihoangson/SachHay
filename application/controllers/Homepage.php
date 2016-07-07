@@ -12,6 +12,8 @@ class Homepage extends CI_Controller {
     }
 
     public function index(){
+        echo create_form();
+        var_dump(1);die;
         $repoBook = $this->em->getRepository("Entity\Book");
         $rs       = $repoBook->getAllBookArrays();
         $this->load->view('_includes/header');
